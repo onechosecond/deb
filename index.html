@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="module">
+  import { snowflakeCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new snowflakeCursor();
+  </script>
+
+  <title>12월의 유령</title>
+  <link rel="stylesheet" href="https://use.typekit.net/oty6kvr.css">
+  <style type="text/css">
+    @font-face {
+    font-family: 'GabiaHeuldot-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/GabiaHeuldot-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GrandifloraOne-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/GrandifloraOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'KyoboHand';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'BMkkubulimTTF-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'KCC-Sonkeechung';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KCC-Sonkeechung.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'ACCchildrenfall';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenfall.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+    .cols {
+  width: 100%;
+  clear: both;
+}
+
+.cols .tile {
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+
+/* two columns layout */
+
+.cols.two .tile {
+  width: 50%;
+}
+
+
+/* three columns layout */
+
+.cols.three .tile {
+  width: 33%;
+}
+
+.cols.three .tile:last-of-type {
+  width: 34%;
+}
+
+
+/* four columns layout */
+
+.cols.four .tile {
+  width: 25%;
+}
+
+
+/**********************/
+
+
+/* layout of the rows */
+
+.rows {
+  height: 100%;
+}
+
+
+/* two rows layout */
+
+.rows.two .cols {
+  height: 50%;
+}
+
+
+/* three rows layout */
+
+.rows.three .cols {
+  height: 33%;
+}
+
+.rows.three .cols:last-of-type {
+  height: 34%;
+}
+
+
+/* four rows layout */
+
+.rows.four .cols {
+  height: 25%;
+}
+
+
+/*****************************************/
+
+
+/* some background images and decoration */
+
+.cols .tile {
+  opacity: 0.4;
+  background-size: cover;
+}
+
+.rows {background-color: #351F2C;
+}
+
+.cols .tile.schmancy {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.cols .tile.schmancy.pic0 {
+  background-image: url("card1.png");
+}
+
+.cols .tile.schmancy.pic1 {
+  background-image: url("card11.png");
+}
+
+.cols .tile.schmancy.pic2 {
+  background-image: url("card6.png");
+}
+
+.cols .tile.schmancy.pic3 {
+  background-image: url("card5.png");
+}
+
+.cols .tile.schmancy.pic4 {
+  background-image: url("card10.png");
+}
+
+.cols .tile.schmancy.pic5 {
+  background-image: url("card8.png");
+}
+
+.cols .tile.schmancy.pic6 {
+  background-image: url("card2.png");
+}
+
+.cols .tile.schmancy.pic7 {
+  background-image: url("card4.png");
+}
+
+.cols .tile.schmancy.pic8 {
+  background-image: url("card3.png");
+}
+
+.cols .tile.schmancy.pic9 {
+  background-image: url("card12.png");
+}
+
+.cols .tile.schmancy.pic10 {
+  background-image: url("card13.png");
+}
+
+.cols .tile.schmancy.pic11 {
+  background-image: url("card14.png");
+}
+
+.cols .tile.schmancy.pic12 {
+  background-image: url("card15.png");
+}
+
+.cols .tile.schmancy.pic13 {
+  background-image: url("card16.png");
+}
+
+.cols .tile.schmancy.pic14 {
+  background-image: url("card17.png");
+}
+
+.cols .tile.schmancy.pic15 {
+  background-image: url("card18.png");
+}
+
+.cols .tile.schmancy.pic16 {
+  background-image: url("card19.png");
+}
+
+/************************************/
+
+
+/* typography and content of a tile */
+
+.tile .content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  margin-left: -25%;
+}
+
+.tile {
+  font-family: Helvetica;
+  color: transparent;
+  text-align: center;
+}
+
+
+/************************/
+
+
+/* animate mouse effect */
+
+.cols .tile {
+  transition: 1s;
+}
+
+.cols .tile:hover {
+  opacity: 1;
+  font-size: 5em;
+  height: 50%
+  width:50%;
+}
+
+.cols.two:hover .tile {
+  width: 20%;
+}
+
+.cols.two:hover .tile:hover {
+  width: 80%;
+}
+
+.cols.three:hover .tile {
+  width: 20%;
+}
+
+.cols.three:hover .tile:hover {
+  width: 60%;
+}
+
+.cols.four:hover .tile {
+  width: 20%;
+}
+
+.cols.four:hover .tile:hover {
+  width: 40%;
+}
+
+.rows .cols {
+  transition: 1s;
+}
+
+.rows.two:hover .cols {
+  height: 20%;
+}
+
+.rows.two:hover .cols:hover {
+  height: 80%;
+}
+
+.rows.three:hover .cols {
+  height: 20%;
+}
+
+.rows.three:hover .cols:hover {
+  height: 60%;
+}
+
+.rows.four:hover .cols {
+  height: 20%;
+}
+
+.rows.four:hover .cols:hover {
+  height: 40%;
+}
+
+    html{font-family: 'GabiaHeuldot-Regular';}
+    body{background-color: #351F2C; color: white; margin: 0; padding: 0; height: 100%; }
+    section, footer, h2, p, .wrap{margin: 0px; padding: 0px 10px 10px 10px;}
+    h1{font-family: 'GrandifloraOne-Regular';font-size: 9rem; color: #66BAFF;  letter-spacing:-.3rem; text-shadow: 0px 0px 20px black; padding-top: 200px; padding-bottom: 0px;}
+    h2{font-size: 2rem; font-weight: 10;line-height: 2.0; letter-spacing:-.1rem;}
+    h3{font-family: 'GrandifloraOne-Regular';font-size: 1.2rem; letter-spacing:-.1rem;}
+    p{font-size: 1.5rem;line-height: 2.0; letter-spacing:-.1rem; padding-top: 0px; padding-bottom: 100px; }
+    footer{margin: 0px; padding: 10px 10px 10px 10px; padding-top: 75px; padding-bottom: 50px;}
+    header {background-color: rgba(128,128,128,0.4);
+      color: #66BAFF;
+      padding-left: 32px;
+      padding-right: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border:3px rgba(102,186,255,0.4);
+      box-shadow: 0px 0px 12px 5px rgba(102,186,255,0.4);
+      -webkit-backdrop-filter: blur(10px)}
+    ul {list-style-type: none;
+      padding: 0;}
+    li {display: inline-block;
+      margin-left: 16px;
+      font-family: 'GrandifloraOne-Regular';font-size: 1.2rem; letter-spacing:-.1rem;}
+    a.button {
+      display: block;
+      position: relative;
+      width: 200px;
+      padding: 37px 37px 37px 37px ;
+      margin: 17px;
+      text-align: center;
+      line-height: 50px;
+      color: #FFFFFF;
+      border-radius: 10px;
+      transition: all 0.2s ;}
+    .sticker{position: absolute;
+            left: 650px;
+            top: 5250px;
+            width: 43%;
+            height: auto;}
+    .btnGreen {
+      background: #27A089;}
+    .btnRed {
+      background: #EC3D46;}
+    .btnGreen.btnBorder {
+      box-shadow: 0px 0px 0px 0px #EC3D46;}
+    .btnGreen.btnBorder:hover {
+      box-shadow: 0px 0px 0px 5px #EC3D46;}
+    .btnRed.btnBorder {
+      box-shadow: 0px 0px 0px 0px #27A089;}
+    .btnRed.btnBorder:hover {
+      box-shadow: 0px 0px 0px 5px #27A089;}
+    .bg-bad{background:url('badwt.jpg'); background-attachment: fixed;}
+    .bg-questi{background:url('questi.png'); background-attachment: fixed;}
+    .bg-sprt{background:url('sprt.png'); background-repeat: no-repeat;    
+      background-size : contain; background-color: #351F2C;}
+    .wrap{width: 1200px; margin: auto;}
+    .boxy{padding-top: 800px; padding-bottom: 425px;}
+    .boxtex{padding-top: 600px; padding-bottom: 600px;}
+    .texty{padding-top: 50px; padding-bottom: 50px; font-size: 5rem; line-height: 1.7;  letter-spacing:-.3rem;}
+    .shrttexty{padding-top: 600px; padding-bottom: 37px;}
+    .smtexty{padding-top: 100px; padding-bottom: 100px;}
+    .bttmOnly{padding-bottom: 600px;}
+    .frstBttn{font-family: 'KyoboHand'; font-size: 1.5rem;}
+    .scndBttn{font-family: 'BMkkubulimTTF-Regular'; font-size:  1.5rem;}
+    .thrdBttn{font-family: 'KCC-Sonkeechung'; font-size:  1.5rem;}
+    .frthBttn{font-family: 'ACCchildrenfall'; font-size:  1.5rem;}
+    .minttx{color: #27A089;}
+    .blutx{color: #66BAFF;}
+    .trnstx{color: transparent;}
+    .flex{display: flex; flex-wrap: wrap;}
+    .w30{width: 30%;}
+    .w35{width: 35%;}
+    .ftleft{text-align: left; font-size: 1rem;line-height: 1.4;}
+    .smleft{text-align: left; font-size: 1rem;line-height: 1.4; opacity: 10%;}
+    .ftcenter{text-align: center; color:transparent; font-size: 1rem;line-height: 1.4;}
+    .ftright{text-align: right; font-size: 1rem;line-height: 1.4;}
+    .center-spacing{padding-left: 100px; padding-right: 100px; text-align: center;}
+    .right-spacing{text-align: right;}
+    .main_image {position: relative; margin: 0; padding: 0;}
+    .main_image_text {position: absolute;
+              top: 46.5%;
+              left: 50%;
+              transform: translate( -50%, -50% );
+              color: #EC3D46;
+              text-shadow: 0px 0px 10px grey;}
+  </style>
+</head>
+<body class="bg-sprt">
+<header>
+  <h3>12월의 유령</h3>
+  <nav>
+    <ul>
+      <li>크리스마스 카드 대필 서비스</li>
+    </ul>
+  </nav>
+</header>
+  <section>
+    <div class="wrap">
+    <h1 class="center-spacing">12월의 유령</h2>
+    <h2 class="boxy right-spacing">손수 편지를 부치던 옛 추억을 떠올리며<br>이번 크리스마스에는<br>사랑하는 친구, 가족, 연인에게<br>마음이 담긴 편지를 선물하세요…</h2>
+    </div>
+  </section>
+  <section class="bg-questi center-spacing">
+    <div class="wrap">
+    <h2 class="texty">친구의 주소를<br>몰라도 됩니다…
+    </h2>
+    </div>
+  </section>
+  <section class="">
+    <div class="wrap">
+    <h2 class="boxtex">유령은 어디든 배달할 수 있습니다…
+    </h2>
+    <p class="smleft">단, 서비스 이용 후<br>개인 정보 침해,<br>사유지 점거,<br>환각 및 이명 등의 이상현상은 당사가 책임지지 않습니다.
+    </p>
+    </div>
+  </section>
+  <section class="bg-bad">
+    <div class="wrap">
+    <h2 class="center-spacing texty">글씨를 못 써서<br>고민이신가요?
+    </h2>
+    </div>
+  </section>
+  <section class="">
+    <div class="wrap">
+    <h2 class="shrttexty blutx">저희 유령 직원들이 대신 써드립니다…<br>원하는 유령 글씨를 골라보세요…
+    </h2>
+    <a title="Button border green" class="button btnBorder btnGreen frstBttn">동그란 유령 글씨</a>
+    <a title="Button border red" class="button btnBorder btnRed scndBttn">구부정한 유령 글씨</a>
+   <a title="Button border green" class="button btnBorder btnGreen thrdBttn">어른스러운 유령 글씨</a>
+    <a title="Button border red" class="button btnBorder btnRed frthBttn btt">힘 없는 유령 글씨</a>
+    <img src="ghosty.png" class="sticker flex">
+    </div>
+    <h2 class="bttmOnly trnstx">dd</h2>
+  </section>
+  <section class="center-spacing">
+    <div class="wrap">
+    <h2 class="smtexty blutx">다양한 디자인의 빈티지 카드가 준비되어 있습니다…
+    </h2>
+    </div>
+
+<section class="">
+    <!-- first page of tiles --> 
+<!-- three rows in full page -->
+<div class="three rows" id="first-page">
+  <!-- three tiles per row -->
+  <div class="three cols">
+    <!-- tile plus some schmancyness -->
+    <div class="schmancy tile pic0">
+      <!-- tile content -->
+      <div class="content">F<br>a<br>c<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <!-- and so on... -->
+    <div class="schmancy tile pic3">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic1">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+  </div>
+  <div class="four cols">
+    <div class="schmancy tile pic2">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic4">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic5">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic8">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>.</div>
+    </div>
+  </div> 
+  <div class="three cols">
+    <div class="schmancy tile pic7">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic6">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile pic15">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y</div>
+    </div>
+  </div>
+</div>
+
+<!-- second page of tiles --> 
+<div class="two rows" id="second-page">
+  <div class="three cols ">
+    <div class="schmancy tile  pic9">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile  pic16">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile  pic11">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+  </div>
+  <div class="three cols">
+    <div class="schmancy tile  pic14">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile  pic12">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y</div>
+    </div>
+    <div class="schmancy tile  pic13">
+      <div class="content">F<br>a<br>n<br>c<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y<br>y</div>
+    </div>
+  </div>
+</div>
+</section>
+
+  </section>
+  <section class="center-spacing">
+    <div class="wrap">
+    <h2 class="boxtex">카드 위에<br>전하고 싶은 마음을 적어보세요…
+    </h2>
+    </div>
+  </section>
+  <section class="center-spacing">
+    <div class="main_image">
+      <img src="envel.png" width="50%" height="50%">
+    <p class="main_image_text" style="font-size: 1.2rem">이제 당신의 카드가 완성되었습니다…</p>
+    </div>
+  </section>
+  <section class="center-spacing">
+    <div class="wrap">
+    <h2 class="boxtex">지금 주문하러 가기
+    </h2>
+    </div>
+  </section>
+  <footer class="center-spacing">
+    <div class="wrap flex">
+    <h2 class="w30 ftleft">CUSTOMER CENTER <br>XX-XXX-XXXX <br> <br>평일 : 9:30 - 18:00<br>식사 : 12:30 - 13:30 <br>토, 일, 공휴일 휴무 / CS : ghostwriting@boo.co.kr 
+    </h2>
+    <h2 class="w35 ftcenter">ghostwriting</h2>
+    <h2 class="w30 ftright">상호 : 12월의 유령 | 서울 노원구 공릉로 232<br>사업자등록번호 : XXX-XX-XXXXX (정보확인) <br>대표이사 : BOO<br> <br>COPYRIGHT 2025. BOO. ALL RIGHTS RESERVED.
+    </h2>
+    </div>
+  </footer>
+</body>
+</html>
